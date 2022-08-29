@@ -1,0 +1,25 @@
+.result {
+    color: black;
+    /* margin: 80px 0 32px 100px; */
+    font-family: Roboto;
+    background-color: #fff;
+    width: 55%;
+    z-index: 999;   
+    padding: 32px;
+    position: relative;
+    border-radius: 6px;
+    text-align: none;
+    min-height: 150px;
+    margin: 80px auto;
+}
+.transc {
+    z-index: 999;
+    margin: 4px 0 10px 0 ;
+    font-size: 14px
+}
+.description b  {
+    z-index: 999;
+    margin-top: 16px;
+}
+.sound {
+}
