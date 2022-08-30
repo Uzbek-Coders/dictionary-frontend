@@ -1,4 +1,4 @@
-const url = "https://dictinary-api.vercel.app";
+const url = process.env.API_CONNECT
 
 
 //Read

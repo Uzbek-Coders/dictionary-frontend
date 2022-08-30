@@ -57,6 +57,9 @@ function Search() {
     // function autocomplete(word) {
     // }
     // setComplete(autocomplete(field));
+    
+  const quote = ["`", "'"]
+  setField( field.replace(quote[0], "’").replace(quote[1], "’"))
 
     function autoComplete(word) {
       if (word && data) {
