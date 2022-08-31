@@ -54,9 +54,6 @@ function Search() {
   }, [lang]);
 
   useEffect(() => {
-    // function autocomplete(word) {
-    // }
-    // setComplete(autocomplete(field));
     
   const quote = ["`", "'"]
   setField( field.replace(quote[0], "’").replace(quote[1], "’"))
@@ -67,9 +64,6 @@ function Search() {
         var complete = data.filter((i) => 
             i.toLowerCase().startsWith(
             word.toLowerCase())
-          // } else {
-          //   console.log("Linkin Park", i, word)
-          
           );
         if (!complete) {
           console.log(1);
