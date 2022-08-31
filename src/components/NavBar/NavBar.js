@@ -12,7 +12,7 @@ function NavBar() {
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             {/* <i className="fas fa-book">   </i> */}
-            &nbsp;&nbsp; Dictionary.uz
+            &nbsp;&nbsp; Leksika.uz
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Result.module.css";
 import { findEngUzb, findUzbEng } from "../../lib/fetchData.js";
-import { BounceLoader } from "react-spinners";
-import axios from "axios"
 function Result(props) {
   const [data, setData] = useState([]);
-  const [load, setLoad] = useState("");
   useEffect(() => {
     async function fetchAlgo(lang, word) {
       let data = await (lang === "EN → UZ"
@@ -27,14 +24,14 @@ function Result(props) {
     fetchAlgo(props.lang, props.search);
   }, [props.search, props.lang]);
 
-  return data ? <ResulComponent data={data} /> : <BounceLoader />;
+  return  <ResulComponent data={data} /> ;
 }
 function ResulComponent(props) {
-  const word = props.data.word;
   let audio = new Audio(
-    `http://ssl.gstatic.com/dictionary/static/sounds/20200429/${word}--_gb_1.mp3`
+    props.data.audio
   );
   const start = () => {
+    console.log(props.data.audio, props.data)
     audio.play();
   };
   return (

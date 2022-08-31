@@ -1,15 +1,14 @@
-const url = process.env.API_CONNECT
-
-
+const url = "https://dictinary-api.vercel.app"
 //Read
 async function readEngUzb(){
+    console.log(url);
     const data = await fetch(`${url}/user/read/eng-uzb`)
     return data
 }
 async function readUzbEng(){
     const data = await fetch(`${url}/user/read/uzb-eng`)
     return data
-}
+};
         
 //Find
 async function findEngUzb(word){
