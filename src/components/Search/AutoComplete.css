@@ -1,27 +1,21 @@
 .autoComplete {
-    display: flex;
+   display: flex;
     justify-content: center;
-    position: relative;
-    margin-left: -20px;
 }
 .autoComplete .comp div {
     width: 100%; 
-    position: relative;
-    border-bottom: 0;
-    border-radius: 4px;
+   border-radius: 4px;
     background: rgba(255, 255, 255, 0.712);
     font-family: Roboto;
-    padding: .6em  8px .6em 10px;
+    padding: .6em  10px .6em 9px;
 }
 .autoComplete .comp {
-    width: 45%; 
-    position: relative;
+   width: 45%; 
 }
 .autoComplete .comp div:hover {
     background-color: #0662a3;
-    color: white;
+   color: white;
 }
 .space {
-    position: relative;
-    width: 81.65px;
+   width: 92.38px;
 }

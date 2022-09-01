@@ -37,7 +37,7 @@ function ResulComponent(props) {
   return (
     <div className={classes.result}>
       {console.log(1, props.data)}
-      <h1> {props.data.word} <i style={{fontSize: "18px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h1>
+      <h2> {props.data.word} <i style={{fontSize: "18px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
       {props.data.transc ? (
         <p className={classes.transc}>{props.data.transc}</p>
       ) : null}
