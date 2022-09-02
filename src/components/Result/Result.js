@@ -31,15 +31,19 @@ function ResulComponent(props) {
     props.data.audio
   );
   const start = () => {
-    console.log(props.data.audio, props.data)
-    audio.play();
+    var msg = new SpeechSynthesisUtterance(props.data.word);
+msg.voice = speechSynthesis.getVoices().filter(function(voice) { 
+      return voice.name == 'Google US English Male'; 
+})[0];
+
+// now say it like you mean it:
+speechSynthesis.speak(msg);
   };
   return (
     <div className={classes.result}>
-      {console.log(1, props.data)}
-      <h2> {props.data.word} <i style={{fontSize: "18px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
+      <h2> {props.data.word} <i style={{fontSize: "21px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
       {props.data.transc ? (
-        <p className={classes.transc}>{props.data.transc}</p>
+        <p className={classes.transc} style={{fontSize: "18px"}}>/{props.data.transc}/</p>
       ) : null}
       <div
         className={classes.description}
