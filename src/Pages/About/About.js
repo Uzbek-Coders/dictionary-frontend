@@ -11,7 +11,7 @@ export const About = () => {
           <div class="u-layout">
             <div class="u-layout-col">
                 <h1 style={{textAlign:"center", margin: "0 auto", marginTop: "40px", marginBottom: "40px", ontWeight: 600}} class="u-custom-font u-font-montserrat u-text u-text-default u-text-1">About Us</h1>
-              <div class="u-size-30">
+              <div class="u-size-30"> 
                 <div class="u-layout-row">
                   <div class="u-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-1">
                     <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-container-layout-1">

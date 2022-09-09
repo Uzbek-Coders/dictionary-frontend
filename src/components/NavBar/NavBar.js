@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./NavBar.css";
+import { Contact } from './../../Pages/Contact/Contact';
 
 function NavBar() {
   const [click, setClick] = useState(false);
@@ -24,7 +25,62 @@ function NavBar() {
                 className="nav-links"
                 onClick={handleClick}
               >
-                Home
+                EN-UZ-EN
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/ru"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                RU-UZ-RU
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/learn-english"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Learning English
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/uzbek-local"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Uzbek Localization
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/for-freelancers"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                For Freelancers
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                exact
+                to="/contact"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Contact
               </NavLink>
             </li>
             <li className="nav-item">
@@ -36,28 +92,6 @@ function NavBar() {
                 onClick={handleClick}
               >
                 About
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/blog"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Blog
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink
-                exact
-                to="/contact"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Contact Us
               </NavLink>
             </li>
           </ul>

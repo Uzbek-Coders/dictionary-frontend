@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #014f86 ;
+  background-color: #01756C ;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -34,7 +34,6 @@
   display: flex;
   list-style: none;
   text-align: center;
-  margin-right: 2rem;
 }
 
 .nav-links {
@@ -50,7 +49,7 @@
 
 .nav-item {
   line-height: 40px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 }
 
 .nav-item:after {
@@ -76,7 +75,7 @@
   display: none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1214px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -90,7 +89,7 @@
   }
 
   .nav-menu.active {
-    background: #014f86 ;
+    background: #01756C ;
     left: 0px;
     opacity: 1;
     transition: all 0.5s ease;

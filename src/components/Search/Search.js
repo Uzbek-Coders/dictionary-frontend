@@ -118,6 +118,7 @@ function Search() {
           {lang}
         </button>
         <input
+          aria-labelledby="search-input"
           className="search_inp"
           onChange={(e) => setField(e.target.value)}
           onKeyPress={handleKeyPress}
@@ -129,6 +130,7 @@ function Search() {
             setComponents(<Result lang={lang} search={field} />); 
             setAutoComponent([])
           }}
+          aria-label="search"
         >
           <i className="fas fa-search"> </i>
         </button>

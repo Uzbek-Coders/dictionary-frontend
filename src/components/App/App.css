@@ -5,6 +5,10 @@
 }
 
 body {
-  background-color: #f3f3f39f;
+  background-color: #EAF7F0;
   /* #01497C; */
+}
+
+a {
+  color: #fff !important;
 }
