@@ -132,7 +132,7 @@ function Search() {
           }}
           aria-label="search"
         >
-          <i className="fas fa-search"> </i>
+          <i className="fas fa-search" stle={{fontSize:"24px"}}> </i>
         </button>
         <br />
       </div>
