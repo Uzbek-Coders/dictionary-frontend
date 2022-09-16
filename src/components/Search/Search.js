@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./AutoComplete.css"
 import Result from "../Result/Result";
 import { readEngUzb, readUzbEng } from "../../lib/fetchData";
+import { ReactComponent as YourSvg } from './clear.svg';
 
 function Search() {
   const [components, setComponents] = useState();
@@ -76,12 +77,11 @@ function Search() {
       }
       let td = [];
       
-      complete.length = 5;
+      complete.length = 7;
       complete.sort((a, b) => a.length - b.length);
       for (let i = 0; i < complete.length; i++) {
         if(complete[i]){
-          td.push(<div role="button" style={{border: 1}} className="complete" key={i} onClick ={(e) => {
-            
+          td.push(<div role="button" style={{border: 1}} className="complete" key={i} onClick ={ (e) => {
             if(complete[i] != field){
               setField(complete[i]);
           } 
@@ -118,6 +118,7 @@ function Search() {
           {lang}
         </button>
         <input
+         type="search" 
           aria-labelledby="search-input"
           className="search_inp"
           onChange={(e) => setField(e.target.value)}
@@ -134,6 +135,17 @@ function Search() {
         >
           <i className="fas fa-search" stle={{fontSize:"24px"}}> </i>
         </button>
+        <button
+          className="clear_btn"
+          onClick={() => {
+            setField("")
+          }} 
+          aria-label="clear"
+        ><YourSvg style={{
+          padding: "7px 0",
+          margin: "0 auto",
+          width: "30px"
+        }}/></button>
         <br />
       </div>
       {console.log(data)}

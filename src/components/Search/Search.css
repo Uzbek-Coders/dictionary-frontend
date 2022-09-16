@@ -14,23 +14,27 @@ border-radius:  0 3px 3px 0;
 border: none;
 
 }
-.search_btn {
-    background-color: white;
+.clear_btn {
+   
+    background-color: transparent;
     border: none;
-    /* position: absolute; */
-    /* bottom: 50% !important; */
-    /* top: 30% !important; */
-    /* left: 28rem; */
-    /* outline: none; */
     width: 50px;
     cursor: pointer;
     color: #01756C;
-    
-    /* left: 28rem; */
+    z-index: 99;
+    margin-left:-82px;
+    /* margin-right: 44px; */
+    height: 45px;
+}
+.search_btn {
+    background-color: white;
+    border: none;
+    width: 50px;
+    cursor: pointer;
+    color: #01756C;
     z-index: 1;
     margin-left:-50px;
     height: 45px;
-    /* border: 1px solid; */
 }
 .search_con {
     position: relative;

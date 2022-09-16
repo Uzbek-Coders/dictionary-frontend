@@ -1,6 +1,7 @@
 .autoComplete {
    display: flex;
     justify-content: center;
+    /* margin-left: 27px; */
 }
 .autoComplete .comp div {
     width: 100%; 
@@ -10,7 +11,8 @@
     padding: .6em  10px .6em 9px;
 }
 .autoComplete .comp {
-   width: 45%; 
+   width: 45%;
+   margin-right: -32px;
 }
 .autoComplete .comp div:hover {
     background-color: #01756C;

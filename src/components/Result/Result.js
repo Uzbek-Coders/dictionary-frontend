@@ -41,7 +41,7 @@ speechSynthesis.speak(msg);
   };
   return (
     <div className={classes.result}>
-      <h2> {props.data.word} <i style={{fontSize: "21 px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
+      <h2> {props.data.word} <i style={{fontSize: "21px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
       {props.data.transc ? (
         <p className={classes.transc} style={{fontSize: "18px"}}>/{props.data.transc}/</p>
       ) : null}
