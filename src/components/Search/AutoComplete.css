@@ -12,7 +12,7 @@
 }
 .autoComplete .comp {
    width: 45%;
-   margin-right: -32px;
+   margin-right: -48px;
 }
 .autoComplete .comp div:hover {
     background-color: #01756C;

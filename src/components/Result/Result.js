@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import classes from "./Result.module.css";
 import { findEngUzb, findUzbEng } from "../../lib/fetchData.js";
 function Result(props) {
+  const [none, setNone] = useState(false)
   const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchAlgo(lang, word) {
-      let data = await (lang === "EN → UZ"
-        ? await findEngUzb(word)
-        : await findUzbEng(word)
-      ).json();
+      if(lang === "EN → UZ"){
+        var data  = await (await findEngUzb(word)).json()
+          setNone(false)
+      } else {
+        var data = await (await findUzbEng(word)).json()
+         setNone(true)
+      }
       const notFound = {
         word: 404,
         desc: 404,
@@ -24,7 +28,7 @@ function Result(props) {
     fetchAlgo(props.lang, props.search);
   }, [props.search, props.lang]);
 
-  return  <ResulComponent data={data} /> ;
+  return  <ResulComponent data={data} none = {none} /> ;
 }
 function ResulComponent(props) {
   let audio = new Audio(
@@ -41,7 +45,7 @@ speechSynthesis.speak(msg);
   };
   return (
     <div className={classes.result}>
-      <h2> {props.data.word} <i style={{fontSize: "21px", marginLeft: "8px", }}className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
+      <h2> {props.data.word} <i style={{fontSize: "21px", marginLeft: "8px", display: props.none?  "none":"inline-block"}} className={`fa fa-volume-up`} onClick={() => start()}></i></h2>
       {props.data.transc ? (
         <p className={classes.transc} style={{fontSize: "18px"}}>/{props.data.transc}/</p>
       ) : null}

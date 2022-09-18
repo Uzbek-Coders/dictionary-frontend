@@ -45,9 +45,8 @@ export const About = () => {
   // </div>
   <div>
   <h1 style={{ textAlign: "center", fontWeight: 700 }}>
-    Under Development
-  </h1>
   <img
+  alt="Under Development"
     src="https://www.freepnglogos.com/uploads/under-construction-png/under-construction-sutton-group-heritage-realty-brokerage-durham-region-real-estate-16.png"
     style={{
       display: "block",
@@ -55,7 +54,8 @@ export const About = () => {
       marginRight: "auto",
       width: "50%",
     }}
-  />
+    />
+    </h1>
 </div>
   );
 };

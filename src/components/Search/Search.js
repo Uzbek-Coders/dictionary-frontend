@@ -10,49 +10,39 @@ function Search() {
   const [components, setComponents] = useState();
   const [lang, setLang] = useState("EN → UZ");
   const [field, setField] = useState("");
-  const [complete, setComplete] = useState([]);
+  const [none, setNone] = useState(false);
   const [data, setData] = useState([]);
   const [autoComponent, setAutoComponent] = useState([]);
-  const [EngUzb, setEngUzb] = useState([]);
-  const [UzbEng, setUzbEng] = useState([]);
   useEffect(() => {
+    setData([])
     async function fetchData() {
-      let EngUzb = await  readEngUzb()
-      let UzbEng = await  readUzbEng()
-      UzbEng = await UzbEng.json()
-      EngUzb = await EngUzb.json()
-      console.log(EngUzb, UzbEng);
-      setEngUzb(EngUzb)
-      setUzbEng(UzbEng)
-      let data = await (lang === "EN → UZ"
-        ? await EngUzb
-        : await UzbEng
-      )
-      const arr = [];
-      data.map((i) => arr.push(i["word"]));
-      setData(arr);
+      if(lang == "EN → UZ"){
+        let EngUzb = await  readEngUzb(field)
+        EngUzb = await EngUzb.json()
+       setData(EngUzb);
+      } else {
+        var UzbEng = await  readUzbEng(field)
+         UzbEng = await UzbEng.json()
+         setData(UzbEng);
+      }
     }
     fetchData(lang);
-  }, []);
-
-  useEffect(() => {
-    async function asyncData(){
-    const EngUzbArr = []
-    const UzbEngArr = []
-    EngUzb.map((i) => EngUzbArr.push(i["word"]))
-    UzbEng.map((i) => UzbEngArr.push(i["word"]))
-    let data =  (lang === "EN → UZ"
-        ?  await EngUzbArr
-        :  await UzbEngArr
-      )
-
-      setData( await data);
-    };
-    asyncData()
-    asyncData()
-    setComplete([]);
     setField("");
   }, [lang]);
+
+  // useEffect(() => {
+  //   async function asyncData(){
+  //   let data =  (lang === "EN → UZ"
+  //       ?  await EngUzbArr
+  //       :  await UzbEngArr
+  //     )
+
+  //     setData(await data);
+  //   };
+  //   asyncData()
+  //   asyncData()
+  //   setField("");
+  // }, [lang]);
 
   useEffect(() => {
     
@@ -97,6 +87,11 @@ function Search() {
       return td;
     }
     setAutoComponent(autoComplete(field));
+    if(!field){
+      setNone(true)
+    } else {
+      setNone(false)
+    }
   }, [field]);
 
   function handleKeyPress(event) {
@@ -144,7 +139,8 @@ function Search() {
         ><YourSvg style={{
           padding: "7px 0",
           margin: "0 auto",
-          width: "30px"
+          width: "30px",
+          display: none?"none" : "block"
         }}/></button>
         <br />
       </div>
@@ -161,4 +157,3 @@ function Search() {
 }
 
 export default Search;
-
