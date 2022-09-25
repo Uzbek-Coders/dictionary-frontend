@@ -17,4 +17,4 @@ export const RuUz = () => {
     </h1>
   </div>
   );
-};
+};  
