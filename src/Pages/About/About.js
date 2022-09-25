@@ -12,11 +12,11 @@ export const About = () => {
 <div style={{ backgroundColor: "#f2f2f2", paddingTop: "24px"}}>
     
       <div style={{width: "72%",marginTop:"66px",  margin: "0 auto", textAlign: "center"}}>
-        <h1 style={{textAlign: "center", marginBottom:"20px"}}>Book edition <hr style={{width: "222px",borderRadius: "105px",height: "2px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/></h1>
-        <p  style={{lineHeight:"28px", wordSpacing:"0.75", fontSize: "16px", fontFamily: "Roboto"}}>To reverse the situation, it was decided to compile a large English-Uzbek-English dictionary and the work started back in 2003. 2 years later, the first edition of the bilingual dictionary was published in G’afur G’ulom publishing house; it is still available for sale online. Much attention was directed to the Uzbek-English part; even now, it is the most comprehensive and complete UZ-EN dictionary.</p>
+        <h1 style={{textAlign: "center", marginBottom:"20px"}}>Book edition <hr style={{width: "222px",borderRadius: "105px",height: "3px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/></h1>
+        <p  style={{lineHeight:"28px", wordSpacing:"0.75", fontSize: "16px", fontFamily: "Roboto"}}>To reverse the situation, it was decided to compile a large English-Uzbek-English dictionary and the work started back in 2003. 2 years later, the <a href="https://www.worldcat.org/title/70168096">first edition</a> of the bilingual dictionary was published in G’afur G’ulom publishing house; it is still <a href="https://asaxiy.uz/product/akbar-kholmurodov-ravshan-azizov-english-uzbek-uzbek-english-dictionary-tamaddun-nashriyot">available</a> for sale online. Much attention was directed to the Uzbek-English part; even now, it is the most comprehensive and complete UZ-EN dictionary.</p>
         {/* <br/> */}
         {/* <div class="info" style={{padding: "6px", borderRadius: "5px", background: "#c6e7ed", color: "#797878"}}> */}
-        <p style={{lineHeight:"25px", wordSpacing:"0.75", fontSize: "16px", fontFamily: "Roboto"}}>A mobile app for Android devices was launched based on the dictionary with major update of the lexical database.
+        <p style={{lineHeight:"25px", wordSpacing:"0.75", fontSize: "16px", fontFamily: "Roboto"}}>A <a href="https://play.google.com/store/apps/details?id=com.hy.enguzb.dictionary&hl=en&gl=US">mobile app</a> for Android devices was launched based on the dictionary with major update of the lexical database.
 </p>
         {/* </div> */}
 </div>
@@ -25,7 +25,7 @@ export const About = () => {
 <div style={{ backgroundColor: "#f2f2f2",paddingTop: "32px"}}>
     
       <div style={{width: "65%",marginTop:"66px",  margin: "0 auto", textAlign: "center"}}>
-        <h1 style={{textAlign: "center", marginBottom:"20px"}}>Website dictionary <hr style={{maxWidth: "264px", minWidth: "100px",borderRadius: "105px",height: "2px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/></h1>
+        <h1 style={{textAlign: "center", marginBottom:"20px"}}>Website dictionary <hr style={{maxWidth: "264px", minWidth: "100px",borderRadius: "105px",height: "3px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/></h1>
         <p  style={{lineHeight:"28px", wordSpacing:"0.75", fontSize: "16px", fontFamily: "Roboto"}}>However, we still desperately needed a high-quality online dictionary for English-Uzbek language pair that could cover both everyday and area-specific vocabulary. In September 2022, on the date of 31th anniversary of Independence of Uzbekistan, Leksika.uz was successfully launched.</p>
         {/* <br/> */}
         {/* <div class="info" style={{padding: "6px", borderRadius: "5px", background: "#c6e7ed", color: "#797878"}}> */}
@@ -34,7 +34,7 @@ export const About = () => {
         {/* </div> */}
 <h2>Prospects</h2>
 </div>
-<div className="container1" style={{display:"flex", justifyContent: "center"}}>
+<div className="container1" style={{ width: "70%", margin: "0 auto",  listStyle: "inside", textAlign: "center"}}>
 <ul style={{lineHeight: "25px", fontFamily: "Roboto"}}>
   <li>Russian-Uzbek-Russian dictionary section with largest database on the web;</li>
   <li>content for easier learning of English, including grammar, writing tips, learning new words;</li>
@@ -62,7 +62,7 @@ export const About = () => {
                     }}
                     class="u-custom-font u-font-montserrat u-text u-text-default u-text-1"
                   >Our team
-                  <hr style={{width: "222px",borderRadius: "105px",height: "2px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/>
+                  <hr style={{width: "222px",borderRadius: "105px",height: "3px", "border":"2px", margin:"0 auto", background: "rgb(5,97,36)", background: "linear-gradient(90deg, rgba(5,97,36,1) 0%, rgba(5,144,119,1) 35%, rgba(2,175,150,1) 99%)"}}/>
                   </h1>
                   <div class="u-size-30">
                     <div class="u-layout-row">
@@ -95,45 +95,7 @@ export const About = () => {
                             language, and as a result some books for English
                             learners and translators were published
                           </p>
-                          <div class="u-size-30">
-                            <div class="u-layout-row">
-                              <div
-                                class="u-align-justify u-container-style u-layout-cell u-size-60 u-white u-layout-cell-3"
-                                style={{ borderRadius: "10px" }}
-                              >
-                                <div
-                                  class="u-container-layout u-valign-middle u-container-layout-3"
-                                  style={{
-                                    padding: "10px 0 0 40px",
-                                    color: "#000 !imporatnt",
-                                  }}
-                                >
-                                  <p class="u-custom-font u-font-montserrat u-text u-text-4">
-                                    English-Uzbek-English dictionary (
-                                    <a href="https://www.worldcat.org/title/70168096">
-                                      <span>book</span>
-                                    </a>
-                                    ,{" "}
-                                    <a href="http://en.wikipedia.org/wiki/">
-                                      <span>app</span>
-                                    </a>
-                                    )
-                                  </p>
-                                  <p class="u-custom-font u-font-montserrat u-text u-text-4">
-                                    English Grammar for Uzbek Learners(
-                                    <a href="https://www.worldcat.org/title/70168096">
-                                      <span>book</span>
-                                    </a>
-                                    ,{" "}
-                                    <a href="http://en.wikipedia.org/wiki/">
-                                      <span>app</span>
-                                    </a>
-                                    )
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                          <div><div><p>English-Uzbek-English dictionary (<a href="https://asaxiy.uz/product/akbar-kholmurodov-ravshan-azizov-english-uzbek-uzbek-english-dictionary-tamaddun-nashriyot"><span>book</span></a>, <a href="https://play.google.com/store/apps/details?id=com.hy.enguzb.dictionary&amp;hl=en&amp;gl=US"><span>app</span></a>)</p><p class="u-custom-font u-font-montserrat u-text u-text-4">English Grammar for Uzbek Learners (<a href="https://asaxiy.uz/product/akbar-kholmurodov-ravshan-azizov-english-uzbek-uzbek-english-dictionary-tamaddun-nashriyot"><span>book</span></a>, <a href="https://asaxiy.uz/product/akbar-kholmurodov-ravshan-azizov-english-uzbek-uzbek-english-dictionary-tamaddun-nashriyot"><span>app</span></a>)</p></div></div>
                         </div>
                       </div>
                     </div>
