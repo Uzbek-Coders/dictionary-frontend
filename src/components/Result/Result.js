@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Result.module.css";
 import { findEngUzb, findUzbEng } from "../../lib/fetchData.js";
+import notFound from "./notFound.png"
 function Result(props) {
   const [none, setNone] = useState(false)
   const [data, setData] = useState([]);
@@ -28,12 +29,9 @@ function Result(props) {
     fetchAlgo(props.lang, props.search);
   }, [props.search, props.lang]);
 
-  return  <ResulComponent data={data} none = {none} /> ;
+  return  data.word == 404?  <NotFoundComp />: <ResulComponent data={data} none = {none} />;
 }
 function ResulComponent(props) {
-  let audio = new Audio(
-    props.data.audio
-  );
   const start = () => {
     var msg = new SpeechSynthesisUtterance(props.data.word);
 msg.voice = speechSynthesis.getVoices().filter(function(voice) { 
@@ -56,5 +54,21 @@ speechSynthesis.speak(msg);
       ></div>
     </div>
   );
+}
+function NotFoundComp(){
+    return (
+      <div className={classes.result}>
+      <h2 style={{textAlign: "center"}}> Oops, no such word found!</h2>
+<div style={{display: "flex"}}>
+<img src={notFound} alt="Shakespear" style={{height: "200px"}}/>
+      <div className={classes.description} style={{lineHeight: "50px", fontSize: "20px",     marginLeft: "50px",
+    marginTop: "24px",
+    fontStyle: "italic",
+    lineHeight: "50px",
+    fontSize: "20px"}}>
+If you believe there is such a word in the language of Shakespeare, please take a few seconds to report it via <a href="https://t.me/+998907163366">Telegram</a> or <a href="https://t.me/+998907163366">Gmail</a> and we will add it asap!</div>
+    </div>
+</div>
+    )
 }
 export default Result;
