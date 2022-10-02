@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import classes from "./Result.module.css";
 import { findEngUzb, findUzbEng } from "../../lib/fetchData.js";
 import notFound from "./notFound.png"
+import notFoundUzb from "./notFoundUzb.png"
 function Result(props) {
   const [none, setNone] = useState(false)
   const [data, setData] = useState([]);
@@ -29,7 +30,17 @@ function Result(props) {
     fetchAlgo(props.lang, props.search);
   }, [props.search, props.lang]);
 
-  return  data.word == 404?  <NotFoundComp />: <ResulComponent data={data} none = {none} />;
+  if( data.word == 404 && props.lang == "EN → UZ"){
+    return <NotFoundEngUzb />
+  } else if( data.word !== 404 && props.lang == "EN → UZ") {
+    return <ResulComponent data={data} none = {none} />;
+  } 
+  if( data.word == 404 && props.lang == "UZ → EN"){
+    return <NotFoundUzbEng />
+  } else if(data.word !== 404 && props.lang == "UZ → EN") {
+    return <ResulComponent data={data} none = {none} />;
+  } 
+
 }
 function ResulComponent(props) {
   const start = () => {
@@ -55,7 +66,7 @@ speechSynthesis.speak(msg);
     </div>
   );
 }
-function NotFoundComp(){
+function NotFoundEngUzb(){
     return (
       <div className={classes.result}>
       <h2 style={{textAlign: "center"}}> Oops, no such word found!</h2>
@@ -66,9 +77,26 @@ function NotFoundComp(){
     fontStyle: "italic",
     lineHeight: "50px",
     fontSize: "20px"}}>
-If you believe there is such a word in the language of Shakespeare, please take a few seconds to report it via <a href="https://t.me/+998907163366">Telegram</a> or <a href="https://t.me/+998907163366">Gmail</a> and we will add it asap!</div>
+If you believe there is such a word in the language of Shakespeare, please take a few seconds to report it via <a href="https://t.me/+998907163366">Telegram</a> or <a href="mailto:akbarbankir@gmail.com">Gmail</a> and we will add it asap!</div>
     </div>
 </div>
     )
+}
+function NotFoundUzbEng(){
+  return (
+    <div className={classes.result}>
+    <h3 style={{textAlign: "center"}}>Whoops, there is no such a word in our database!</h3>
+<div style={{display: "flex"}}>
+<img src={notFoundUzb} alt="Guy" style={{height: "200px", marginTop: "12px",}}/>
+<div className={classes.description} style={{lineHeight: "50px", fontSize: "20px",     marginLeft: "30px",
+    marginTop: "24px",
+    fontStyle: "italic",
+    lineHeight: "50px",
+    fontSize: "20px"}}>
+If you strongly believe the word exists in the Uzbek language, please take a few seconds to report it via <a href="t.me/+998907163366">Telegram</a> or <a href="mailto:akbarbankir@gmail.com">Gmail</a> and we will add it asap! </div>
+
+</div>
+</div>
+  )
 }
 export default Result;
