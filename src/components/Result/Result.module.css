@@ -31,8 +31,12 @@
         width:75%
     }
 }
-        @media screen and (max-width: 606px){
+@media screen and (max-width: 606px){
             .result{
                 width:95%
             }
         }
+
+@media screen and (max-width: 930px){
+                                                                                                                                                                                                                                                                                                                                                                                                                                    
+}

@@ -30,14 +30,14 @@ function Result(props) {
     fetchAlgo(props.lang, props.search);
   }, [props.search, props.lang]);
 
-  if( data.word == 404 && props.lang == "EN → UZ"){
+  if( data.word === 404 && props.lang === "EN → UZ"){
     return <NotFoundEngUzb />
-  } else if( data.word !== 404 && props.lang == "EN → UZ") {
+  } else if( data.word !== 404 && props.lang === "EN → UZ") {
     return <ResulComponent data={data} none = {none} />;
   } 
-  if( data.word == 404 && props.lang == "UZ → EN"){
+  if( data.word === 404 && props.lang === "UZ → EN"){
     return <NotFoundUzbEng />
-  } else if(data.word !== 404 && props.lang == "UZ → EN") {
+  } else if(data.word !== 404 && props.lang === "UZ → EN") {
     return <ResulComponent data={data} none = {none} />;
   } 
 
@@ -46,7 +46,7 @@ function ResulComponent(props) {
   const start = () => {
     var msg = new SpeechSynthesisUtterance(props.data.word);
 msg.voice = speechSynthesis.getVoices().filter(function(voice) { 
-      return voice.name == 'Google US English Male'; 
+      return voice.name === 'Google US English Male'; 
 })[0];
 
 // now say it like you mean it:
@@ -66,17 +66,20 @@ speechSynthesis.speak(msg);
     </div>
   );
 }
+const styleClass= {
+lineHeight: "50px", 
+fontSize: "20px",   
+marginLeft: "50px",
+marginTop: "24px",
+fontStyle: "italic",
+}
 function NotFoundEngUzb(){
     return (
       <div className={classes.result}>
       <h2 style={{textAlign: "center"}}> Oops, no such word found!</h2>
-<div style={{display: "flex"}}>
-<img src={notFound} alt="Shakespear" style={{height: "200px"}}/>
-      <div className={classes.description} style={{lineHeight: "50px", fontSize: "20px",     marginLeft: "50px",
-    marginTop: "24px",
-    fontStyle: "italic",
-    lineHeight: "50px",
-    fontSize: "20px"}}>
+<div style={{display: "flex", alignItems: "center"}}>
+<img src={notFound} alt="Shakespear" style={{width: "200px", textAlign: "center"}}/>
+      <div className={classes.description} style={styleClass}>
 If you believe there is such a word in the language of Shakespeare, please take a few seconds to report it via <a href="https://t.me/+998907163366">Telegram</a> or <a href="mailto:akbarbankir@gmail.com">Gmail</a> and we will add it asap!</div>
     </div>
 </div>
@@ -86,13 +89,9 @@ function NotFoundUzbEng(){
   return (
     <div className={classes.result}>
     <h3 style={{textAlign: "center"}}>Whoops, there is no such a word in our database!</h3>
-<div style={{display: "flex"}}>
-<img src={notFoundUzb} alt="Guy" style={{height: "200px", marginTop: "12px",}}/>
-<div className={classes.description} style={{lineHeight: "50px", fontSize: "20px",     marginLeft: "30px",
-    marginTop: "24px",
-    fontStyle: "italic",
-    lineHeight: "50px",
-    fontSize: "20px"}}>
+<div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+<img src={notFoundUzb} alt="Guy" style={{height: "200px", marginTop: "12px",textAlign: "center"}}/>
+<div className={classes.description} style={styleClass}>
 If you strongly believe the word exists in the Uzbek language, please take a few seconds to report it via <a href="t.me/+998907163366">Telegram</a> or <a href="mailto:akbarbankir@gmail.com">Gmail</a> and we will add it asap! </div>
 
 </div>

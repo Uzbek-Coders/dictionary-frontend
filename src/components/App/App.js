@@ -3,7 +3,8 @@ import NavBar from "../NavBar/NavBar"
 import { BrowserRouter as Router, Switch, Route, Redirect  } from "react-router-dom";
 import { About } from "../../Pages/About/About";
 import { Article } from "../../Pages/Articles/Articles";
-import { RuUz } from "../../Pages/RuUz/RuUz";
+// import { RuUz } from "../../Pages/RuUz/RuUz";
+import   Search1  from "../../Pages/RuUz/Search.js";
 import Search from "../Search/Search";
 import {readEngUzb} from "../../lib/fetchData.js";
 import { useEffect} from "react";
@@ -34,7 +35,7 @@ import { useEffect} from "react";
               <About/>
             </Route>
             <Route path="/articles" component={Article} />
-            <Route path="/ru-uz" component={RuUz} />
+            <Route path="/ru-uz" component={Search1} />
           </Switch>
         </div>
       </Router>

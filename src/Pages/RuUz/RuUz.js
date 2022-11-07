@@ -1,48 +1,46 @@
 import React  from "react";
 import axios from "axios"
+import cutter from "./fetch.js"
+import Result from "./Result.js";
 
-function getRuUz(word){
-  axios.get(`http://127.0.0.1:8080/http://localhost:8080/https://uz.wiktionary.org/w/index.php?title=olma&action=raw`, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      "Origin": "https://uz.wiktionary.org/"
-    },
-    }).then(function (response) {
-      console.log('response is : ' + response.data);
 
-    }).catch(function (error) {
-      if (error.response) {
-        console.log(error.response.headers);
-      } 
-      else if (error.request) {
-          console.log(error.request);
-      } 
-      else {
-        console.log(error.message);
-      }
-    console.log(error.config);
-  });
-};
-
-export const RuUz = () => {
+ const RuUz = (props) => {
+  const [data, setData] = React.useState("Loading...")
   React.useEffect(() => {
-    console.log(getRuUz("olma"))
-  }, []);
+    function getRuUz(word){
+  
+      axios.get(`https://shrouded-escarpment-45572.herokuapp.com/https://uz.wiktionary.org/w/index.php?title=${word}&action=raw`, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          "Origin": "https://uz.wiktionary.org/"
+        },
+        }).then(function (response) {
+          console.log(cutter(response.data))
+          setData(cutter(response.data))
+    // return response.data 
+        }).catch(function (error) {
+          if (error.response) {
+            console.log(error.response.headers);
+          } 
+          else if (error.request) {
+              console.log(error.request);
+          } 
+          else {
+            console.log(error.message);
+          }
+        console.log(error.config);
+      });
+      // return aha //
+    };
+    getRuUz(props.field)
+  }, [props.field]);
+  
   return (
   <div>
-    <h1 style={{ textAlign: "center", fontWeight: 700 }}>
-    <img
-    alt={"Under Development"}
-    src={"https://www.freepnglogos.com/uploads/under-construction-png/under-construction-eisenhower-high-school-prom-0.png"}
-      style={{
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "45%",
-        marginTop: "50px"
-      }}
-    />
-    </h1>
+  
+    <Result res={data}/>
   </div>
   );
 };  
+
+export default RuUz

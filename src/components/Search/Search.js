@@ -51,10 +51,13 @@ function Search() {
 
     function autoComplete(word) {
       if (word && data) {
-        console.log("LP", data[0], word, complete);
-        var complete = data.filter((i) => 
-            i.toLowerCase().startsWith(
-            word.toLowerCase())
+        console.log("LP", data[0], word, !data);
+        var filtered = data.filter(function (el) {
+          return el != null;
+        });
+        var complete = filtered.filter((i) =>
+          i.toLowerCase().startsWith(
+          word.toLowerCase())
           );
         if (!complete) {
           console.log(1);
