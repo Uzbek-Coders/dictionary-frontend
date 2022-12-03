@@ -15,7 +15,6 @@ text = text.replace("izhoh|", "")
         text = text.substring(ruIndex1, ruLastIndex).replace("= ", "").replace(/\/$/, "")
         text = text.substring(0, text.length - +(text.lastIndexOf('<')==text.length-1))
         // .substring(0, text.length - +(text.lastIndexOf('/')==text.length-1));
-
     } else {
         const tarjima = text.indexOf("=== Maʼnosi ===");
         const sinonim = text.indexOf("=== Sinonimlari ===");

@@ -9,7 +9,7 @@ import Result from "./Result.js";
   React.useEffect(() => {
     function getRuUz(word){
   
-      axios.get(`https://shrouded-escarpment-45572.herokuapp.com/https://uz.wiktionary.org/w/index.php?title=${word}&action=raw`, {
+      axios.get(`https://cors-anywhere-lake.vercel.app/uz.wiktionary.org/w/index.php?title=${word}&action=raw`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           "Origin": "https://uz.wiktionary.org/"
