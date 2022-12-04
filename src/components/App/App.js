@@ -2,7 +2,8 @@ import "./App.css";
 import NavBar from "../NavBar/NavBar"
 import { BrowserRouter as Router, Switch, Route, Redirect  } from "react-router-dom";
 import { About } from "../../Pages/About/About";
-import  Article  from "../../Pages/Articles/Article.jsx";
+import Articles from "../../Pages/Articles/";
+import Article from '../../Pages/Articles/Article'
 import  RuUz  from "../../Pages/RuUz/RuUz";
 import   Search1  from "../../Pages/RuUz/Search.js";
 import Search from "../Search/Search";
@@ -35,13 +36,13 @@ import { useEffect} from "react";
               <About/>
             </Route>
             <Route path="/articles">
-              <Article />
+              <Articles />
             </Route>
             <Route path="/articles/search/:text">
-              <Article />
+              <Articles />
             </Route>
             <Route path="/articles/tag/:tag">
-              <Article />
+              <Articles />
             </Route>
             <Route path='/article/:id'>
               <Article />

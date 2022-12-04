@@ -22,7 +22,7 @@ const PopularArticle = ({ id, title, summary, thumbnail }) => {
                     src={thumbnail} />
 
                 <Box color='#666' display='inline' fontWeight={300} lineHeight={1.625}>
-                    <Typography component='a' href={`/article/${id}`} color='#01756C'>{title}</Typography><br />
+                    <Typography component='a' href={`/article/${id}`} color='primary'>{title}</Typography><br />
                     {summary ?? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere esse aspernatur id eos similique soluta, asperiores explicabo veniam repell..."}</Box>
             </CardContent>
         </>

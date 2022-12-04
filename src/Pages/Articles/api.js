@@ -1,4 +1,5 @@
- const BASE_URI = 'https://dictinary-api.vercel.app/api/v1/blog'
+const BASE_URI = 'https://dictinary-api.vercel.app/api/v1/blog'
+// const BASE_URI = 'http://localhost:4000/api/v1/blog'
 const OPTIONS = { headers: { 'Accept': 'application/json' } }
 
 

@@ -22,11 +22,11 @@ const ArticleCard = ({ id, title, summary, views, date, thumbnail }) => {
             <Box marginBottom='24px'>
                 <i className='fa fa-calendar' style={{ color: '#999' }}></i>
                 &nbsp;
-                <Typography component='span' color='#01756C' fontSize={16}>{date}</Typography>
+                <Typography component='span' color='primary' fontSize={16}>{date}</Typography>
                 &nbsp;&nbsp;&nbsp;
                 <i className='fa fa-eye' style={{ color: '#999' }}></i>
                 &nbsp;
-                <Typography component='span' color='#01756C' fontSize={16}>{views}</Typography>
+                <Typography component='span' color='primary' fontSize={16}>{views}</Typography>
             </Box>
 
             <CardContent sx={{ padding: 0 }}>
@@ -47,7 +47,7 @@ const ArticleCard = ({ id, title, summary, views, date, thumbnail }) => {
                     href={`/article/${id}`}
                     variant='contained'
                     size="small"
-                    sx={{ bgcolor: '#01756C', marginLeft: 'auto', ':hover': { color: '#01756C', bgcolor: '#fff' } }}>
+                    sx={{ marginLeft: 'auto', ':hover': { color: '#01756C', bgcolor: '#fff' } }}>
                     Read More
                 </Button>
             </CardActions>
