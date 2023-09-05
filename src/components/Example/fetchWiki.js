@@ -1,5 +1,6 @@
 function cutter(text) {
-    const regex = /#:\s*{{ux\|en\|([^}]*)}}/g;
+    const regex1 = /#:\s*{{ux-lite\|en\|([^}]*)}}/g;
+    const regex2 = /#:\s*{{ux\|en\|([^}]*)}}/g;
     let boldReg = /(?<=\''')(.*?)(?=\''')/;
     const matches = [];
     while (text.includes("'''")) {
@@ -8,7 +9,16 @@ function cutter(text) {
         text = text.replace(`'''${matched[1]}'''`, wrap);
     }
     let match;
-    while ((match = regex.exec(text)) !== null) {
+    while ((match = regex1.exec(text)) !== null) {
+        match[1] = match[1]
+            .replaceAll('{{', '')
+            .replaceAll('}}', '')
+            .replaceAll("[[", '')
+            .replaceAll(']]', '')
+            .replaceAll("|", ' ')
+        matches.push(match[1]);
+    }
+    while ((match = regex2.exec(text)) !== null) {
         match[1] = match[1]
             .replaceAll('{{', '')
             .replaceAll('}}', '')
@@ -18,7 +28,7 @@ function cutter(text) {
         matches.push(match[1]);
     }
 
-    return matches
+    return matches.slice(0, 15);
 
 }
 

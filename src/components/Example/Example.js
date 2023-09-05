@@ -26,7 +26,7 @@ import cutter from "./fetchWiki.js";
                     setData([])
                  })
         }
-        getExamples(props.word);
+        getExamples(props.word !== "undefined"? props.word: "" );
     }, [props.word]);
      return data[0]? (<div>
          <b style={{color: "green"}}>Examples: </b>
