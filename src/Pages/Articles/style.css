@@ -327,6 +327,8 @@
 }
 
 .article-item-unit {
+  width: 80%;
+  margin: 0 auto;
   padding: 24px 36px;
   background: #fff;
   border-radius: 18px;
@@ -336,7 +338,10 @@
 .article-item-unit .article-item-content p:first-child img {
   /* width: 100% !important; */
 }
-
+ .article-item-unit img {
+   width: 90%;
+   height: auto !important;
+ }
 .article-item-unit .article-item-content p:not(:first-child) img {
   margin-right: 10px;
 }
@@ -346,7 +351,7 @@
     flex-direction: column;
   }
 
-  .article-card img {
+  .article-item-unit{
     width: 100%;
   }
 

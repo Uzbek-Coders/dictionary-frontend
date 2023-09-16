@@ -6,6 +6,7 @@ import { RiSearch2Line } from "react-icons/ri";
 import { TbArrowsExchange } from "react-icons/tb";
 import RuUz from "./RuUz.js";
 import { ReactComponent as YourSvg } from "../../components/Search/clear.svg";
+import AdsComponent from "../../lib/AdSense";
 
 function Search1() {
   const [components, setComponents] = useState("");
@@ -89,6 +90,7 @@ function Search1() {
         </button>
       </div>
       {components}
+      <AdsComponent/>
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { ReactComponent as YourSvg } from "./clear.svg";
 import "./AutoComplete.css";
 import "./Search.css";
 import Example from "../Example/Example";
+import AdsComponent from "../../lib/AdSense";
 
 function Search() {
   const [English, setEnglish] = useState([]);
@@ -223,6 +224,7 @@ function Search() {
         )}
       </div>
       {components}
+      <AdsComponent/>
     </div>
   );
 }
