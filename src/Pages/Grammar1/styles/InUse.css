@@ -118,7 +118,7 @@
 }
 .questionBtnContainer {
   display: flex !important;
-  justify-content: end !important;
+  justify-content: flex-end !important;
 }
 .nextQuestionBtn {
   max-width: 205px !important;

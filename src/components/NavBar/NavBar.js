@@ -21,7 +21,7 @@ function NavBar() {
     <>
       <nav className="navbar">
         <div className="nav-container">
-          <NavLink exact to="/en-uz" className="nav-logo">
+          <NavLink  exact to="/en-uz" className="nav-logo">
             <svg
               width="300"
               height="60"
@@ -72,16 +72,15 @@ function NavBar() {
                   }
                 }}
               >
-                <NavLink
-                  exact
-                  to="/en-uz"
-                  activeClassName="active"
+                <a
+                  
+                  href="/en-uz"
                   className="nav-links"
                 >
                   ENG
                   <TbArrowsExchange />
                   UZB
-                </NavLink>
+                </a>
               </li>
               <li
                 className="nav-item"
@@ -91,16 +90,14 @@ function NavBar() {
                   }
                 }}
               >
-                <NavLink
-                  exact
-                  to="/ru-uz"
-                  activeClassName="active"
+                <a
+                  href="/ru-uz"
                   className="nav-links"
                 >
                   RUS
                   <TbArrowsExchange />
                   UZB
-                </NavLink>
+                </a>
               </li>
               <li
                 className="nav-item"
@@ -110,14 +107,13 @@ function NavBar() {
                   }
                 }}
               >
-                <NavLink
-                  exact
-                  to="/articles"
-                  activeClassName="active"
+                <a
+                  
+                  href="/articles" 
                   className="nav-links"
                 >
                   Articles
-                </NavLink>
+                </a>
               </li>
               <li
                 className="nav-item"
@@ -127,14 +123,13 @@ function NavBar() {
                   }
                 }}
               >
-                <NavLink
-                  exact
-                  to="/grammar"
-                  activeClassName="active"
+                <a
+                  
+                  href="/grammar" 
                   className="nav-links"
                 >
                   Grammar
-                </NavLink>
+                </a>
               </li>
               <li
                 className="nav-item"
@@ -144,14 +139,14 @@ function NavBar() {
                   }
                 }}
               >
-                <NavLink
-                  exact
-                  to="/about"
-                  activeClassName="active"
+                <a
+                  
+                  href="/about"
+                 
                   className="nav-links"
                 >
                   About
-                </NavLink>
+                </a>
               </li>
             </div>
             {click && <Footer />}

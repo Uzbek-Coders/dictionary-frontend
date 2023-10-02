@@ -18,6 +18,7 @@ import Search from "../Search/Search";
 import Footer from "../Footer/Footer";
 import { readEngUzb } from "../../lib/fetchData.js";
 import { useEffect } from "react";
+import AdsComponent from "../../lib/AdSense";
 
 function App() {
   useEffect(() => {
@@ -38,7 +39,7 @@ function App() {
             <Route exact path="/">
               <Redirect to="/en-uz" />
             </Route>
-            <Route exact path="/en-uz">
+            <Route path="/en-uz">
               <Search />
             </Route>
             <Route path="/about">
@@ -64,6 +65,7 @@ function App() {
             <Route path="*" component={NotFound} />
           </Switch>
         </main>
+        <AdsComponent />
         <Footer />
       </Router>
     </div>

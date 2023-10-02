@@ -146,6 +146,10 @@ th {
   align-items: center;
   gap: 16px;
 }
+.about-unit-sm a {
+  color: black !important;
+  font-size: 22px !important
+}
 .quiz {
   background: #fff;
   padding: 24px 0;

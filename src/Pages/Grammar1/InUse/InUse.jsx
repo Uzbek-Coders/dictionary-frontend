@@ -9,6 +9,7 @@ import facebook from "../../../static/facebook.svg";
 import twitter from "../../../static/twitter.svg";
 import { BsBook } from "react-icons/bs";
 import { TbCalendarEvent } from "react-icons/tb";
+import AdsComponent from "../../../lib/AdSense";
 
 const GrammarInUse = () => {
 

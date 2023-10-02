@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 const AdsComponent = (props) => {
-    const { dataAdSlot } = props;
 
 
 
@@ -21,10 +20,10 @@ const AdsComponent = (props) => {
 
     return (
         <>
-            <ins class="adsbygoogle"
+            <ins className="adsbygoogle"
                 style={{display:"block"}}
                 data-ad-client="ca-pub-8555908314454713"
-                data-ad-slot="2661412308"
+                data-ad-slot="6110794033"
                 data-ad-format={"auto"}
                 data-full-width-responsive="true"></ins>
         </>

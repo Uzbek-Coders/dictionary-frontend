@@ -224,7 +224,6 @@ function Search() {
         )}
       </div>
       {components}
-      <AdsComponent/>
     </div>
   );
 }

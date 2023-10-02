@@ -90,7 +90,6 @@ function Search1() {
         </button>
       </div>
       {components}
-      <AdsComponent/>
     </div>
   );
 }
