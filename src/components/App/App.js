@@ -22,7 +22,7 @@ import AdsComponent from "../../lib/AdSense";
 import ModalVisibility from "../ModalVisibility";
 import Profile from "../../Pages/Profile";
 import { useAuthUser } from "react-auth-kit";
-
+import WikiQuote from "../QuoteOfDay/WikiQuote.js";
 function App() {
   const auth = useAuthUser()();
   useEffect(() => {
@@ -46,6 +46,7 @@ function App() {
             </Route>
             <Route path="/en-uz">
               <Search />
+              <WikiQuote />
             </Route>
             <Route path="/about">
               <About />
@@ -63,7 +64,10 @@ function App() {
               <Article />
             </Route>
 
-            <Route path="/ru-uz" component={Search1} />
+            <Route path="/ru-uz">
+              <Search1/>
+              <WikiQuote />
+            </Route>
             {auth && <Route path="/profile" component={Profile} />}
             <Route path="/grammar/:id" component={GrammarInUse} />
             <Route path="/grammar" component={Grammar} />

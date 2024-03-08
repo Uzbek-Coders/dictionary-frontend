@@ -2,22 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import {
   Box,
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
   CircularProgress,
-  Divider,
-  Grid,
   Link,
-  List,
-  ListItem,
-  ListItemButton,
   Paper,
-  TextField,
-  Pagination,
   useMediaQuery,
-  useTheme,
   createTheme,
   ThemeProvider,
 } from "@mui/material";
@@ -38,7 +26,7 @@ const Articles = () => {
     },
   });
 
-  const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
+  // const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalDocuments, setTotalDocuments] = useState(0);
@@ -76,8 +64,6 @@ const Articles = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  const paginate = (event) =>
-    setCurrentPage(parseInt(event.target.textContent));
 
   const search = () => {
     setText(document.querySelector("#text").value);
@@ -205,7 +191,7 @@ const Articles = () => {
                   (_, ind) => {
                     return (
                       <span
-                        className={`page ${ind + 1 == currentPage && "active"}`}
+                        className={`page ${ind + 1 === currentPage && "active"}`}
                         key={ind + 1}
                       >
                         {ind + 1}
